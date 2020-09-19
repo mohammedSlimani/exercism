@@ -1,9 +1,9 @@
 class Matrix:
     def __init__(self, matrix_string):
-        self.matrix = [x.split(' ') for x in matrix_string.split('\n')]
+        self.matrix = [[int(i) for i in x.split()] for x in matrix_string.split('\n')]
 
     def row(self, index):
-        return [int(x) for x in self.matrix[index - 1]]
+        return self.matrix[index - 1]
 
     def column(self, index):
-        return [int(x[index - 1]) for x in self.matrix]
+        return [x[index - 1] for x in self.matrix]
