@@ -12,3 +12,11 @@ def is_isogram(string):
                 existing.append(_str)
 
     return True
+
+
+'''
+This is a smarter way of doing it! filter the string and then use the fact that sets have unique elements
+def is_isogram(string):
+    string = [char for char in string.lower() if char.isalnum()]
+    return len(set(string)) == len(string)
+'''
